@@ -18,7 +18,7 @@ sed -i '$a src-git lienol https://github.com/Lienol/openwrt-package' feeds.conf.
 sed -i '$a src-git diy1 https://github.com/xiaorouji/openwrt-passwall' feeds.conf.default
 
 # Add luci-app-openclash
-git clone -b master https://github.com/vernesong/OpenClash.git package-temp
+git clone -b master https://github.com/xiaoqingfengATGH/homeclash.git package-temp
 rm -rf package/lean/luci-app-openclash
 mv -f package-temp/luci-app-openclash package/lean/
 cat >> .config <<EOF
