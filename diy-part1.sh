@@ -39,4 +39,4 @@ CONFIG_PACKAGE_libncurses=y
 CONFIG_PACKAGE_libreadline=y
 CONFIG_PACKAGE_terminfo=y
 EOF
-#rm -rf package-temp
+rm -rf package-temp
