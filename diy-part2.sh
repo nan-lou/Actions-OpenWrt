@@ -24,3 +24,8 @@ git clone -b master https://github.com/jerrykuku/luci-theme-argon package/lean/l
 #'设置默认主题'
 default_theme='argon'
 sed -i "s/bootstrap/$default_theme/g" feeds/luci/modules/luci-base/root/etc/config/luci
+
+
+
+
+git clone https://github.com/godros/luci-app-godproxy.git package/luci-app-godproxy
