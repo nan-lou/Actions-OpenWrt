@@ -21,7 +21,7 @@ rm -rf package/lean/luci-theme-argon
 #git clone https://github.com/jerrykuku/luci-theme-argon -b 19.07_stable package/lean/luci-theme-argon
 
 
-git clone -b 18.06 https://github.com/jerrykuku/luci-theme-argon.git
+git clone -b 18.06 https://github.com/jerrykuku/luci-theme-argon.git package/luci-theme-argon
 
 #'设置默认主题'
 default_theme='argon'
