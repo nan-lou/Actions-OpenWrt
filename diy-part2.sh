@@ -19,7 +19,9 @@ sed -i 's/192.168.1.1/10.10.10.6/g' package/base-files/files/bin/config_generate
 #'删除argon主题，并拉最新版'
 rm -rf package/lean/luci-theme-argon
 #git clone https://github.com/jerrykuku/luci-theme-argon -b 19.07_stable package/lean/luci-theme-argon
-git clone -b master https://github.com/jerrykuku/luci-theme-argon package/lean/luci-theme-argon
+
+
+git clone -b 18.06 https://github.com/jerrykuku/luci-theme-argon.git
 
 #'设置默认主题'
 default_theme='argon'
