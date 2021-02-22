@@ -16,17 +16,13 @@ sed -i 's/192.168.1.1/10.10.10.6/g' package/base-files/files/bin/config_generate
 
 
  
+#'删除argon主题，并拉最新版'
+rm -rf package/lean/luci-theme-argon
+#git clone https://github.com/jerrykuku/luci-theme-argon -b 19.07_stable package/lean/luci-theme-argon
+git clone -b master https://github.com/jerrykuku/luci-theme-argon package/lean/luci-theme-argon
 
-# theme: atmaterial
-git clone https://github.com/sypopo/luci-theme-atmaterial.git theme-temp/luci-theme-atmaterial
-rm -rf theme-temp/luci-theme-atmaterial/LICENSE
-rm -rf theme-temp/luci-theme-atmaterial/README.md
-rm -rf package/lean/luci-theme-atmaterial
-mv -f theme-temp/luci-theme-atmaterial package/lean/
-cat >> .config <<EOF
-CONFIG_PACKAGE_luci-theme-atmaterial=y
-EOF
-#rm -rf theme-temp
 
-default_theme='atmaterial'
+
+
+default_theme='argon'
 sed -i "s/bootstrap/$default_theme/g" feeds/luci/modules/luci-base/root/etc/config/luci
