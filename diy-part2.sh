@@ -13,21 +13,25 @@
 # Modify default IP
 sed -i 's/192.168.1.1/10.10.10.6/g' package/base-files/files/bin/config_generate
 
-
-
  
 #'删除argon主题，并拉最新版'
 rm -rf package/lean/luci-theme-argon
-#git clone https://github.com/jerrykuku/luci-theme-argon -b 19.07_stable package/lean/luci-theme-argon
+git clone -b 18.06 https://github.com/jerrykuku/luci-theme-argon.git package/lean/luci-theme-argon
 
+#'godproxy'
+rm -rf package/lean/luci-theme-argon
+git clone https://github.com/godros/luci-app-godproxy.git package/lean/luci-theme-argon
 
-git clone -b 18.06 https://github.com/jerrykuku/luci-theme-argon.git package/luci-theme-argon
+# theme: atmaterial	
+rm -rf package/lean/luci-theme-atmaterial	
+git clone https://github.com/sypopo/luci-theme-atmaterial.git  package/lean/luci-theme-atmaterial	
+
+cat >> .config <<EOF	
+CONFIG_PACKAGE_luci-theme-atmaterial=y	
+EOF	
+
 
 #'设置默认主题'
-default_theme='argon'
+default_theme='atmaterial'	
 sed -i "s/bootstrap/$default_theme/g" feeds/luci/modules/luci-base/root/etc/config/luci
 
-
-
-
-git clone https://github.com/godros/luci-app-godproxy.git package/luci-app-godproxy
