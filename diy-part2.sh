@@ -28,6 +28,9 @@ git clone https://github.com/sypopo/luci-theme-atmaterial.git  package/lean/luci
 
 cat >> .config <<EOF	
 CONFIG_PACKAGE_luci-theme-atmaterial=y	
+CONFIG_PACKAGE_luci-app-godproxy=y	
+CONFIG_PACKAGE_luci-theme-argon=y	
+
 EOF	
 
 
